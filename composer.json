@@ -1,0 +1,10 @@
+{
+    "name": "mapie/sgfat3",
+    "autoload": {
+        "psr-4": {
+            "Mapie\\Sgfat3\\": "src/",
+            "app\\": "app/"
+        }
+    },
+    "require": {}
+}
