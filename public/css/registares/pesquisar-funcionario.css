@@ -1,0 +1,14 @@
+input, label{
+    color:#002860;
+}
+fieldset{
+    border-color: #00C076;
+    border-radius: 10px;
+    width: 50vw;
+    height: 30vh;
+}
+.pesquisa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
