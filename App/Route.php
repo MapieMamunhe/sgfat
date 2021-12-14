@@ -19,11 +19,30 @@ class Route extends Bootstrap {
 			'action' => 'login'
 		);
 		$routes['dashboardMotorista'] = array(
-			'route' => '/dashboards/motorista',
+			'route' => '/dashboard/motorista',
 			'controller' => 'dashboardController',
 			'action' => 'motorista'
 		);
-		
+		$routes['dashboardCobrador'] = array(
+			'route' => '/dashboard/cobrador',
+			'controller' => 'dashboardController',
+			'action' => 'cobrador'
+		);
+		$routes['dashboardGestor'] = array(
+			'route' => '/dashboard/gestor',
+			'controller' => 'dashboardController',
+			'action' => 'gestor'
+		);
+		$routes['dashboardSecretaria'] = array(
+			'route' => '/dashboard/secretaria',
+			'controller' => 'dashboardController',
+			'action' => 'secretaria'
+		);
+		$routes['dashboardFiscal'] = array(
+			'route' => '/dashboard/fiscal',
+			'controller' => 'dashboardController',
+			'action' => 'fiscal'
+		);
 
 		$this->setRoutes($routes);
 	}

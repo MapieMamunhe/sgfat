@@ -51,3 +51,31 @@ p#info{
     justify-content: center;
     text-align: center;
 }
+div.btn{
+    display: grid;
+    place-items: center;
+}
+
+button{
+    font-size: 12pt;
+    color:#fff;
+    font-weight: bold;
+    text-align: center;
+    width: 150px;
+    height: 100px;
+    box-shadow: none;
+    border: 0px;
+    margin: 0px 20px;
+}
+.verde button{
+    background-color: #00C076;
+}
+.cinza button{
+    background-color: #88918D;
+}
+button#verde-escuro{
+    background-color: #4A876F;
+}
+button:hover, button#verde-escuro:hover{
+    background-color: #173B6E;
+}
