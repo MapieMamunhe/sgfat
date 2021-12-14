@@ -6,24 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <!--Para o Header-->
-    <link rel="stylesheet" href="/css/header-style.css">
+    <link rel="stylesheet" href="/css/layout-template-styles/dashboard.css">
 </head>
 <body>
     
     <div class="corpo">
-        <header>Sistema de Gest&atilde;o de Funcion&aacute;rios e Autocarro</header>
-        <div class="menu">
-            <?= $this->content() ?>
+        <div id="esquerda">
+            <header>Sistema de Gest&atilde;o de Funcion&aacute;rios e Autocarro</header>
+            <div class="menu">
+                <?= $this->content() ?>
+            </div>
             <footer>SGFAT &#64; 2021</footer>
         </div>
-        <div class="info">
-            <p>
-                <img src="/img/user-64.png" alt="user-64" srcset="">
-            </p>
-            <p id="info">
-                Aqui Fica a descricao Responsabilidade do model
-            </p>
+        <div id="direita">
+            <div class="info">
+                <p>
+                    <img src="/img/user-64.png" alt="user-64" srcset="">
+                </p>
+                <p id="info">
+                    Aqui Fica a descricao Responsabilidade do model
+                </p>
+            </div>
         </div>
+       
     </div>
 </body>
 </html>
