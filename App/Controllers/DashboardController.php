@@ -4,6 +4,6 @@ use MF\Controller\Action;
 class DashboardController extends Action{
 
     public function motorista(){
-        $this->render('motorista', 'dashboard-layout');
+        $this->render('motorista', 'dashboardLayout');
     }
 }
