@@ -1,9 +1,3 @@
-@font-face {
-    font-family: 'poppins';
-    src: url('/fonts/poppins/Poppins-Regular.ttf')/*Para os demais navegadores*/;
-    font-weight: normal;
-    font-style: normal;
-}
 fieldset{
     border: solid 5px;
     border-color: #00C076;
@@ -14,7 +8,6 @@ fieldset{
     width: 30vw;
     height: 40vh;
     padding: 20px;
-
 }
 p{
     margin: 10px;
