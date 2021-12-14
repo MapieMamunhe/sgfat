@@ -4,6 +4,10 @@
     font-weight: normal;
     font-style: normal;
 }
+a{
+    text-decoration: none;
+    color:white;
+}
 body{
     margin:0;
     padding: 0;
@@ -51,12 +55,17 @@ button{
     height: 100px;
     box-shadow: none;
     border: 0px;
+   
+}
+a{
+    text-decoration: none;
 }
 button#verde-escuro{
     background-color: #4A876F;
 }
 button:hover, button#verde-escuro:hover{
     background-color: #173B6E;
+    
 }
 button{
     margin: 0 20vh;

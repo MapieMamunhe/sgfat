@@ -1,14 +1,51 @@
-input, label{
+*{
+    color:black;
+}
+input, label, select{
     color:#002860;
 }
 fieldset{
     border-color: #00C076;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 50vw;
+    max-width: 25rem;
     height: 30vh;
+    display: block;
+    position: relative;
+    
+}
+
+input, select{
+    width: 50%;
+    position: absolute;
+    right: 10px;
+    padding: 5px;
+}  
+form p{
+    margin: 10px;
+    padding: 10px;
+}
+#submeter{
+    position: absolute;
+    margin-right: 20%;
+    background-color: #00C076;
+    border-style: none;
+    border-radius: 20px;
+    font-size: 12pt;
+    height: 2.5rem;
 }
 .pesquisa{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top:20vh;
+}
+#cancelar{
+    background-color: #C00000;
+    border-style: none;
+    height: 7vh;
+    width: 14vw;
+    margin: 20px 10px;
+    position: fixed;
+    bottom: 0px;
 }

@@ -1,10 +1,16 @@
 {
     "name": "mapie/sgfat3",
-    "autoload": {
-        "psr-4": {
-            "Mapie\\Sgfat3\\": "src/",
-            "app\\": "app/"
+    "authors": [
+        {
+            "name": "Mapie Mamunhe",
+            "email": "mmamunhe@gmail.com"
         }
-    },
+    ],
+	"autoload": {
+		"psr-4": {
+			"App\\": "App/",
+			"MF\\": "vendor/MF/"
+		}
+	},
     "require": {}
 }
