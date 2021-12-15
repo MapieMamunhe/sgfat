@@ -1,6 +1,3 @@
-*{
-    color:black;
-}
 input, label, select{
     color:#002860;
 }
@@ -32,6 +29,7 @@ form p{
     border-style: none;
     border-radius: 20px;
     font-size: 12pt;
+    font-weight: bold;
     height: 2.5rem;
 }
 .pesquisa{
@@ -48,4 +46,8 @@ form p{
     margin: 20px 10px;
     position: fixed;
     bottom: 0px;
+}
+#submeter:hover{
+    background-color: #002860;
+    color:#fff;
 }

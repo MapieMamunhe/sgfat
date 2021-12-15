@@ -23,6 +23,7 @@ class AuthController extends Action {
 			session_start();
 
 			$_SESSION['funcao'] = $funcionario->__get('funcao');
+			$_SESSION['telefone'] = $funcionario->__get('telefone');
 			$_SESSION['nome'] = $funcionario->__get('nome');
 
 			header('Location: /dashboard/'.$_SESSION['funcao']);

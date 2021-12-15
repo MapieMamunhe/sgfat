@@ -28,10 +28,28 @@ class Route extends Bootstrap {
 			'controller' => 'dashboardController',
 			'action' => 'cobrador'
 		);
+
+		
 		$routes['dashboardGestor'] = array(
 			'route' => '/dashboard/gestor',
 			'controller' => 'dashboardController',
 			'action' => 'gestor'
+		);
+		//Registar FUncionario
+		$routes['pesquisarFuncionario'] = array(
+			'route' => '/pesquisarFuncionario',
+			'controller' => 'registarController',
+			'action' => 'pesquisarFuncionario'
+		);
+		$routes['pegaFuncionario'] = array(
+			'route' => '/pegaFuncionario',
+			'controller' => 'registarController',
+			'action' => 'pegarFuncionarioPorDocumento'
+		);
+		$routes['formRegisto'] = array(
+			'route' => '/formRegistoFuncionario',
+			'controller' => 'registarController',
+			'action' => 'formRegistoFuncionario'
 		);
 		$routes['dashboardSecretaria'] = array(
 			'route' => '/dashboard/secretaria',
@@ -42,7 +60,8 @@ class Route extends Bootstrap {
 			'route' => '/dashboard/fiscal',
 			'controller' => 'dashboardController',
 			'action' => 'fiscal'
-		);$routes['autenticar'] = array(
+		);
+		$routes['autenticar'] = array(
 			'route' => '/autenticar',
 			'controller' => 'AuthController',
 			'action' => 'autenticar'

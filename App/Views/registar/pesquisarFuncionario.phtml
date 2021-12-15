@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/css/registares/pesquisarFuncionario.css">
+<div class="pesquisa">
+        <form action="/pegaFuncionario" method="post">
+            <fieldset>
+                <p>
+                    <label for="documento">DOCUMENTO</label> 
+                    <select name="documento" id="documento">
+                        <option value="BI">BI</option>
+                        <option value="Cartao de eleitor">Cartao de Eleitor</option>
+                        <option value="DIRE">DIRE</option>
+                        <option value="Passaporte">Passaporte</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="numero">N&uacute;mero</label>
+                    <input type="text" name="numero" id="numero">
+                </p>
+                <p>
+                    <input type="submit" id="submeter" name="submeter" value="Submeter">
+                </p>
+            </fieldset>
+        </form>
+        <?php
+            if(isset($_GET['existeFuncionario'])){
+                if($_GET['existeFuncionario']){
+
+                
+                    ?>
+                       <script>alert("Funcionario ja se encontra cadastrado")</script>
+                    <?php
+                  
+                }
+            }
+        ?>
+    </div>

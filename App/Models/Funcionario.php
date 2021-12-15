@@ -10,6 +10,8 @@ class Funcionario extends Model {
 	private $nome;
 	private $telefone;
 	private $senha;
+	private $documento;
+	private $numeroDocumento;
 
 	public function __get($atributo) {
 		return $this->$atributo;
@@ -53,7 +55,7 @@ class Funcionario extends Model {
 	}
 
 	//recuperar um usuário por telefone
-	public function getFuncionarioPortelefone() {
+	public function getFuncionarioPorTelefone() {
 		$query = "select nome, telefone1 from funcionario where telefone1 = :telefone";
 		$stmt = $this->db->prepare($query);
 		$stmt->bindValue(':telefone', $this->__get('telefone'));
@@ -61,6 +63,19 @@ class Funcionario extends Model {
 
 		return $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	}
+	//Recuperar FUncionario por documento
+	public function getFuncionarioPorDocumento() {
+		$query = "select nome, telefone1 from funcionario 
+		where tipoDocumento = :documento and numeroDocumento = :numeroDocumento";
+		$stmt = $this->db->prepare($query);
+
+		$stmt->bindValue(':documento', $this->__get('documento'));
+		$stmt->bindValue(':numeroDocumento', $this->__get('numeroDocumento'));
+		
+		$stmt->execute();
+		return $stmt->fetch(\PDO::FETCH_ASSOC);
+	}
+
 
 	public function autenticar() {
 
@@ -82,6 +97,7 @@ class Funcionario extends Model {
 		if($Funcionario['funcao'] != '' && $Funcionario['nome'] != '') {
 			$this->__set('funcao', $Funcionario['funcao']);
 			$this->__set('nome', $Funcionario['nome']);
+			$this->__set('telefone', $Funcionario['telefone']);
 		}
 
 		return $this;

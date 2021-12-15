@@ -29,9 +29,5 @@ class DashboardController extends Action{
         $this->isLogged();
         $this->render('fiscal', 'dashboardLayout');
     }
-    private function isLogged(){
-        if(!($_SESSION['funcao']!='' && $_SESSION['nome']!='')){
-            header('location: /');
-        }
-    }
+    
 }
