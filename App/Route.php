@@ -42,6 +42,10 @@ class Route extends Bootstrap {
 			'route' => '/dashboard/fiscal',
 			'controller' => 'dashboardController',
 			'action' => 'fiscal'
+		);$routes['autenticar'] = array(
+			'route' => '/autenticar',
+			'controller' => 'AuthController',
+			'action' => 'autenticar'
 		);
 
 		$this->setRoutes($routes);
