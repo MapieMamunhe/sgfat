@@ -1,0 +1,40 @@
+body{
+    background-color: #DFDBDB;
+    display: grid;
+    place-items: center;
+}
+form{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    height: 90vh;
+    position: relative;
+}
+#submeter{
+    
+}
+.titulo{
+    color: #002860;
+    position: absolute;
+    left: 35px;
+    top:10px;
+    margin-bottom: 20px;
+}
+div.sublinha{
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    margin-top: 20px;
+    font-size: 14pt;
+}
+ select, option{
+    font-size: 14pt;
+}
+div.sublinha div{
+    margin:10px;
+}
+label{
+    display:inline;
+}

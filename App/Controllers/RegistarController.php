@@ -19,12 +19,18 @@ class RegistarController extends Action{
         $numeroDocumento = $_POST['numero'];
         $funcionario ->__set('documento',$documento);
         $funcionario ->__set('numeroDocumento',$numeroDocumento);
-        if(count($funcionario->getFuncionarioPorDocumento())>0){
+        $dados = $funcionario->getFuncionarioPorDocumento();
+
+        var_dump($dados);
+        if(!empty($dados)){
             header('location: /pesquisarFuncionario?existeFuncionario=true');
         }else{
             header('location: /formRegistoFuncionario');
         }
-       
-        
+    }
+    public function formRegistoFuncionario(){
+        session_start();
+        $this->isLogged();
+        $this->render('formRegistoFuncionario', 'registoLayout');
     }
 }
