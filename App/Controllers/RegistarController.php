@@ -50,18 +50,24 @@ class RegistarController extends Action{
         $dados = unserialize($_POST['dados']);
         $funcionario = Container::getModel('Funcionario');
         //Sanitizando os dados
+        date("Y-m-d", strtotime($dados['dataNascimento']));
         foreach($dados as $k=>$v){
             $dados[$k] = htmlspecialchars($v);
             $funcionario->__set($k, $v);
         }
+        
         if($dados['Funcao_idFuncao']==4){//motorista
             if(empty($dados['cartaConducao'])){
-                echo 'Carta de conducao vazia para motorista';
+                $this->view->mensagem="O numero de carta de conducao <br /> &eacute; obrigatoria para motoristas";
+                $this->render('erroCadastrar');
             }
+        } else if(!$funcionario->validarCadastro()){
+            $this->view->mensagem="Um ou mais dados de cadastro invalidos";
+            $this->render('erroCadastrar');
+        }else{
+            $funcionario->salvarComSeusDados($dados);
+            $this->render('registado');
         }
-        if(!$funcionario->validarCadastro()){
-            echo 'Dados de cadastro invalidos';
-        }
-        $this->render('registado');
+       
     }
 }

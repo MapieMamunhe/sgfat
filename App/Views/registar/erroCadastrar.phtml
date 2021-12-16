@@ -1,0 +1,52 @@
+<style>
+    .titulo{
+        display: grid;
+        place-items: center;
+        background-color: #ff0000;
+        width:100%;
+    }
+    p{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    body .corpo{
+        display: grid;
+        place-items: center;
+    }
+    .corpo{
+        margin-top: 50px;
+    }
+    .titulo{
+        margin: 10px 0px;
+        margin-top: 0px;
+    }
+    .caixa{
+        border: solid #00C076 1px;
+        height: 300px;
+        width: 350px;
+       
+    }
+    .caixa div{
+        display: grid;
+        place-items: center;
+    }
+    div a{
+        text-decoration: none;
+        display: grid;
+        place-items: center;
+    }
+</style>
+<div class="corpo">
+    <div class="caixa">
+        <header class="titulo">DADOS INCORRECTOS</header>
+        <div>
+            <p><?=$this->view->mensagem; ?></p>
+            <a href="/formRegistoFuncionario">
+                <button class="confirmar">
+                    VOLTAR
+                </button>
+            </a>
+        </div>
+    </div>
+</div>

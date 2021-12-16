@@ -72,7 +72,7 @@ class Funcionario extends Model {
 		if(!empty($this->getFuncionarioPorDocumento())){
 			$valido = false;
 		}
-		if(!empty($this->getFuncionarioPorCartaConducao())){
+		if(isset($this->getFuncionarioPorCartaConducao()['cartaConducao'])){
 			$valido = false;
 		}
 		if(strlen($this->__get('nome')) < 3) {
@@ -114,7 +114,7 @@ class Funcionario extends Model {
 	}
 //Recuperar FUncionario por Carta de conducao
 	public function getFuncionarioPorCartaConducao() {
-		$query = "select nome, telefone1 from funcionario 
+		$query = "select nome, telefone1, cartaConducao from funcionario 
 		where cartaConducao = :cartaConducao";
 		$stmt = $this->db->prepare($query);
 

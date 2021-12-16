@@ -72,7 +72,7 @@
             <div>
                 Data de Nascimento:
                 <div class="dado">
-                    <?=$dados['dataNascimento']?>
+                    <?=date("Y-m-d", strtotime($dados['dataNascimento']));?>
                 </div>
             </div>
             <div>
