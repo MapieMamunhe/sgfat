@@ -54,9 +54,6 @@ class Funcionario extends Model {
 		foreach ($dados as $key => $value) {
 			$stmt->bindValue(':'.$key, $value);
 		} 
-		echo '<pre>';
-        print_r($dados);
-        echo '</pre>';
 		$stmt->execute();
 
 		return $this;
@@ -131,13 +128,13 @@ class Funcionario extends Model {
 
 		$query = "select da.telefone1 as telefone,
 			 da.senha as senha, fu.nome as funcao, 
-			f.nome + ' ' + f.apelido as nome
+			concat(f.nome, ' ' , f.apelido) as nome
 			from dadosacesso da
 			join funcionario f on f.telefone1 = da.telefone1
 			join funcao fu on f.Funcao_idFuncao = fu.idFuncao
 			where da.telefone1 = :telefone and da.senha = :senha";
 		$stmt = $this->db->prepare($query);
-		$stmt->bindValue(':telefone', $this->__get('telefone'));
+		$stmt->bindValue(':telefone', $this->__get('telefone1'));
 		$stmt->bindValue(':senha', $this->__get('senha'));
 		$stmt->execute();
 
@@ -146,7 +143,7 @@ class Funcionario extends Model {
 		if($Funcionario['funcao'] != '' && $Funcionario['nome'] != '') {
 			$this->__set('funcao', $Funcionario['funcao']);
 			$this->__set('nome', $Funcionario['nome']);
-			$this->__set('telefone', $Funcionario['telefone']);
+			$this->__set('telefone1', $Funcionario['telefone']);
 		}
 
 		return $this;

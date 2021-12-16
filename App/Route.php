@@ -61,6 +61,11 @@ class Route extends Bootstrap {
 			'controller' => 'registarController',
 			'action' => 'registarFuncionario'
 		);
+		$routes['terminarSessao'] = array(
+			'route' => '/terminarSessao',
+			'controller' => 'authController',
+			'action' => 'sair'
+		);
 		$routes['formRegisto'] = array(
 			'route' => '/formRegistoFuncionario',
 			'controller' => 'registarController',

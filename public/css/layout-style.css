@@ -39,7 +39,7 @@ fieldset{
     border-style: none;
     height: 3rem;
     transition: .3s;
-    width: 100px;
+    width: 150px;
     align-items: center;
 }
 .confirmar{
@@ -53,10 +53,9 @@ button{
     align-items: center;
 }
 .cancelar{
-    
+    text-align: center;
     background-color: #ff0000;
     color:#fff;
     padding-left: 10px;
-    border-radius: 30px;
    
 }

@@ -11,9 +11,11 @@
     <form action="/continuarRegisto" method="post">
         <?= $this->content() ?>
         <input type="submit" id="submeter" value="Continuar">
-        <input type="button" id = "cancelar" value="Cancelar">
-    </form>
 		
+    </form>
+	<a href="/dashboard/<?=$_SESSION['funcao']?>" class="cancelar">
+			<button class="cancelar">CANCELAR</button>
+	</a>
 
 	</body>
 

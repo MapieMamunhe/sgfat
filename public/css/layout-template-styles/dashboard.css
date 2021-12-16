@@ -41,7 +41,10 @@ p img{
     border-radius: 50px;
     margin-left: 75%;
 }
-p#info{
+#info > div > div{
+    color:#00C076;
+}
+#info{
     background-color: #fff;
     border: solid 1px black;
     height: 37vh;
@@ -78,4 +81,11 @@ button#verde-escuro{
 }
 button:hover, button#verde-escuro:hover{
     background-color: #173B6E;
+}
+.logout{
+    display: flex;
+    text-decoration: none;
+    justify-content: flex-end;
+    margin: 20px;
+    color:red;
 }

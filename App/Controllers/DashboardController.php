@@ -1,12 +1,14 @@
 <?php
 namespace App\Controllers;
 use MF\Controller\Action;
+use MF\Model\Container;
 use MF\Model\Model;
 class DashboardController extends Action{
 
     public function motorista(){
         session_start();
         $this->isLogged();
+        
         $this->render('motorista', 'dashboardLayout');
     }
     public function secretaria(){

@@ -22,14 +22,33 @@
             <footer>SGFAT &#64; 2021</footer>
         </div>
         <div id="direita">
+
             <div class="info">
                 <p>
                     <img src="/img/user-64.png" alt="user-64" srcset="">
                 </p>
-                <p id="info">
-                    Aqui Fica a descricao Responsabilidade do model
-                </p>
+                <div id="info">
+                <div>
+                        Funcao:
+                        <div>
+                            <?= strtoupper($_SESSION['funcao']);?>
+                        </div>
+                    </div>
+                    <div>
+                        Nome:
+                        <div>
+                            <?= strtoupper($_SESSION['nome']);?>
+                        </div>
+                    </div>
+                    <div>
+                        Telefone:
+                        <div>
+                            <?=  strtoupper($_SESSION['telefone']);?>
+                        </div>
+                    </div>   
+                </div>
             </div>
+            <a href="/terminarSessao" class="logout">TERMINAR SESSAO</a>
         </div>
        
     </div>
