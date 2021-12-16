@@ -4,9 +4,11 @@ body{
     box-sizing: border-box;  
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    color:white;
+    color:black;
+    margin-bottom: 11vh;
   }
 header, footer{
+    color:#fff;
     background-color: #002860;
     height: 10vh;
     display:grid;
@@ -29,4 +31,32 @@ fieldset{
     width: 30vw;
     height: 40vh;
     padding: 20px;
+}
+.cancelar, .confirmar{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    border-style: none;
+    height: 3rem;
+    transition: .3s;
+    width: 100px;
+    align-items: center;
+}
+.confirmar{
+    background-color:#00C076;
+    color:#002860;
+    font-style: bold;
+    text-align: center;
+}
+button{
+    text-align: center;
+    align-items: center;
+}
+.cancelar{
+    
+    background-color: #ff0000;
+    color:#fff;
+    padding-left: 10px;
+    border-radius: 30px;
+   
 }

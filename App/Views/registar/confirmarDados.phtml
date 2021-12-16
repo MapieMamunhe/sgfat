@@ -1,0 +1,166 @@
+<?php
+    $dados = $this->view->dados_funcionario;
+    $tipo_funcionario = array(
+        "Gestor",
+        "Secretaria",
+        "Fiscal",
+        "Motorista",
+        "Cobrador"
+    );
+?>
+<style>
+    body .corpo{
+        display: grid;
+        place-items: center;
+    }
+    .tudo{
+        margin: 10px 0px;
+        border: solid black 1px;
+        width: 70vw;
+    }
+    .resto{
+        padding: 0 20px;
+        color: #002860;
+    }
+    .cabecalho{
+        width: 100%;
+    }
+    #titulo{
+        color:#00C076;
+        text-align: center;
+        font-size: 14pt;
+        margin: 5px;
+    }
+    .confirmar{
+        background-color: #DFDBDB;
+        border-radius: 10px;
+    }
+    .dado{
+        color:#00C076;
+    }
+    div .dado{
+        display: inline-block;
+    }
+</style>
+<div class="corpo">
+  <div class="tudo">
+    <div class="cabecalho">
+            <header>GRAVAR DADOS?</header>
+    </div>
+    <div class="resto">
+        <p id="titulo"><?=$tipo_funcionario[($dados['Funcao_idFuncao']-1)]?></p>
+        <div class="linha">
+            <div>
+                Nome
+                <div class="dado">
+                    <?=$dados['nome'].' '.$dados['apelido']?>
+                </div>
+               
+            </div>
+            <div>
+                Sexo:
+                <div class="dado">
+                 <?=$dados['sexo']?>
+                </div>
+            </div>
+            <div>
+                Telefone:
+                <div class="dado">
+                  <?=$dados['telefone1']?>  
+                  </div>
+            </div>
+            <div>
+                Data de Nascimento:
+                <div class="dado">
+                    <?=$dados['dataNascimento']?>
+                </div>
+            </div>
+            <div>
+                Documento:
+                <div class="dado">
+                    <?=$dados['numeroDocumento']?>
+                </div>
+            </div>
+            <div>
+                Tipo de Documento:
+                <div class="dado">
+                 <?=$dados['tipoDocumento']?>
+                </div>
+            </div>
+        </div>
+        <div class="linha">
+            <div>
+                NUIT:
+                <div class="dado">
+                    <?=$dados['nuit']?>
+                <d/iv>
+        </div>
+            <div>
+                Carta de Conducao:
+                <div class="dado">
+                    <?=$dados['cartaConducao']?>
+                </div>
+        </div>
+        <div>
+            Categoria de carta de conducao:
+            <div class="dado">
+                <?=$dados['categoriaCartaConducao']?>
+            </div>
+        </div>
+        <div>
+            Nivel academico:
+            <div class="dado">
+                <?=$dados['nivelAcademico']?>
+            </div>
+        </div>
+            <div>
+                Formacao academica:
+                <div class="dado">
+                    <?=$dados['formacaoAcademica']?>
+                </div>
+        </div>
+        </div>
+        <div class="linha">
+            <h3>RESIDENCIA</h3>
+            <div>
+                Provincia:
+                <div class="dado">
+                    <?=$dados['provincia']?>
+                </div>
+            </div>
+            <div>
+                Distrito:
+                <div class="dado">
+                    <?=$dados['distrito']?>
+                </div>
+            </div>
+            <div>
+                Bairro:
+                <div class="dado">
+                    <?=$dados['bairro']?>
+                </div>
+            </div>
+            <div>
+                Quarteirao:
+                <div class="dado">
+                    <?=$dados['quarteirao']?>
+                </div>
+            </div>
+            <div>
+                Numero de casa:
+                <div class="dado">
+                    <?=$dados['numeroCasa']?>
+                </div>
+            </div>
+            <form action="/registarFuncionario" method="post">
+               <input type="hidden" name="dados" id="" value=<?php echo (serialize($dados)); ?>>
+                <input type="submit" class="confirmar" value="CADASTRAR">
+            </form>
+            <!--<a href="/registarFuncionario">
+			    <button >CADASTRAR</button>
+		    </a>-->
+        </div>
+    </div>
+  </div>
+</div>
+

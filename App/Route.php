@@ -46,6 +46,21 @@ class Route extends Bootstrap {
 			'controller' => 'registarController',
 			'action' => 'pegarFuncionarioPorDocumento'
 		);
+		$routes['continuarRegisto'] = array(
+			'route' => '/continuarRegisto',
+			'controller' => 'registarController',
+			'action' => 'continuarRegisto'
+		);
+		$routes['confirmarDados'] = array(
+			'route' => '/confirmarDadosFuncionario',
+			'controller' => 'registarController',
+			'action' => 'confirmarDadosFuncionario'
+		);
+		$routes['registarFuncionario'] = array(
+			'route' => '/registarFuncionario',
+			'controller' => 'registarController',
+			'action' => 'registarFuncionario'
+		);
 		$routes['formRegisto'] = array(
 			'route' => '/formRegistoFuncionario',
 			'controller' => 'registarController',
