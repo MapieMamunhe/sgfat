@@ -126,13 +126,7 @@ class Funcionario extends Model {
 
 	public function autenticar() {
 
-		$query = "select da.telefone1 as telefone,
-			 da.senha as senha, fu.nome as funcao, 
-			concat(f.nome, ' ' , f.apelido) as nome
-			from dadosacesso da
-			join funcionario f on f.telefone1 = da.telefone1
-			join funcao fu on f.Funcao_idFuncao = fu.idFuncao
-			where da.telefone1 = :telefone and da.senha = :senha";
+		$query = "select * from usuario where telefone = :telefone and senha = :senha";
 		$stmt = $this->db->prepare($query);
 		$stmt->bindValue(':telefone', $this->__get('telefone1'));
 		$stmt->bindValue(':senha', $this->__get('senha'));
